@@ -1,70 +1,84 @@
-# Getting Started with Create React App
+# Weight Tracker Application
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Overview
+The Weight Tracker application is a React-based web app that allows users to log their daily weight and visualize it in a line graph. Users can also edit or delete existing entries, and the app ensures data is always stored in ascending order of dates. The app uses local storage to persist data across sessions.
 
-## Available Scripts
+## Features
+- **Add Weight Entries:** Users can select a date and enter their weight.
+- **Date Validation:** Dates cannot be greater than the current date.
+- **Undo Feature:** Users can undo an overridden entry within 5 seconds.
+- **Delete Feature:** Users can manually delete weight entries.
+- **Data Visualization:** Displays the weight history in a line graph using Chart.js.
+- **Data Persistence:** Stores data locally using `localStorage`.
 
-In the project directory, you can run:
+## Technologies Used
+- **Frontend Framework:** React.js
+- **Chart Library:** Chart.js
+- **Date Picker:** `react-datepicker`
+- **Styling:** Custom CSS
 
-### `npm start`
+## Installation
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/yourusername/weight-tracker.git
+   cd weight-tracker
+   ```
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+3. Start the development server:
+   ```bash
+   npm start
+   ```
+4. Open your browser and navigate to `http://localhost:3000`.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Deployment
+This app is ready to be deployed on platforms like [Vercel](https://vercel.com). Follow these steps:
+1. Build the production version:
+   ```bash
+   npm run build
+   ```
+2. Deploy the `build/` directory to your preferred hosting platform.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Usage
+1. **Adding a Weight Entry:**
+   - Select a date using the date picker.
+   - Enter the weight in kilograms.
+   - Click the `Submit` button.
 
-### `npm test`
+2. **Editing an Entry:**
+   - Enter the same date with a new weight value. The app will override the existing entry.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+3. **Deleting an Entry:**
+   - Click the delete button next to an entry in the weight history.
 
-### `npm run build`
+4. **Undo Overridden Entry:**
+   - After overriding an entry, click the `Undo changes` button within 5 seconds to restore the previous value.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Folder Structure
+```plaintext
+src/
+├── components/
+│   ├── WeightTrackerApp.js  # Main application component
+├── styles/
+│   ├── App.css             # Custom CSS for styling
+├── App.js                   # Root component
+├── index.js                 # Entry point
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Future Enhancements
+- Integration with a backend for centralized data storage.
+- Authentication for multiple user profiles.
+- Additional visualizations, such as bar charts or pie charts.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Contributing
+Feel free to fork this repository and submit pull requests for new features or bug fixes.
 
-### `npm run eject`
+## License
+This project is licensed under the MIT License. See the `LICENSE` file for details.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+---
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Enjoy tracking your weight with ease! 🎉
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
