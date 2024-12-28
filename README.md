@@ -1,84 +1,87 @@
-# Weight Tracker Application
+# Weight Tracker
 
-## Overview
-The Weight Tracker application is a React-based web app that allows users to log their daily weight and visualize it in a line graph. Users can also edit or delete existing entries, and the app ensures data is always stored in ascending order of dates. The app uses local storage to persist data across sessions.
+A simple and intuitive weight tracking application to help you monitor and visualize your weight changes over time. Built using React.js, it uses a clean and interactive interface to log your daily weight and display the data on a dynamic line graph.
 
-## Features
-- **Add Weight Entries:** Users can select a date and enter their weight.
-- **Date Validation:** Dates cannot be greater than the current date.
-- **Undo Feature:** Users can undo an overridden entry within 5 seconds.
-- **Delete Feature:** Users can manually delete weight entries.
-- **Data Visualization:** Displays the weight history in a line graph using Chart.js.
-- **Data Persistence:** Stores data locally using `localStorage`.
-
-## Technologies Used
-- **Frontend Framework:** React.js
-- **Chart Library:** Chart.js
-- **Date Picker:** `react-datepicker`
-- **Styling:** Custom CSS
-
-## Installation
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/yourusername/weight-tracker.git
-   cd weight-tracker
-   ```
-2. Install dependencies:
-   ```bash
-   npm install
-   ```
-3. Start the development server:
-   ```bash
-   npm start
-   ```
-4. Open your browser and navigate to `http://localhost:3000`.
-
-## Deployment
-This app is ready to be deployed on platforms like [Vercel](https://vercel.com). Follow these steps:
-1. Build the production version:
-   ```bash
-   npm run build
-   ```
-2. Deploy the `build/` directory to your preferred hosting platform.
-
-## Usage
-1. **Adding a Weight Entry:**
-   - Select a date using the date picker.
-   - Enter the weight in kilograms.
-   - Click the `Submit` button.
-
-2. **Editing an Entry:**
-   - Enter the same date with a new weight value. The app will override the existing entry.
-
-3. **Deleting an Entry:**
-   - Click the delete button next to an entry in the weight history.
-
-4. **Undo Overridden Entry:**
-   - After overriding an entry, click the `Undo changes` button within 5 seconds to restore the previous value.
-
-## Folder Structure
-```plaintext
-src/
-├── components/
-│   ├── WeightTrackerApp.js  # Main application component
-├── styles/
-│   ├── App.css             # Custom CSS for styling
-├── App.js                   # Root component
-├── index.js                 # Entry point
-```
-
-## Future Enhancements
-- Integration with a backend for centralized data storage.
-- Authentication for multiple user profiles.
-- Additional visualizations, such as bar charts or pie charts.
-
-## Contributing
-Feel free to fork this repository and submit pull requests for new features or bug fixes.
-
-## License
-This project is licensed under the MIT License. See the `LICENSE` file for details.
+## Live Demo
+Check out the live application here: [Weight Tracker on Vercel](https://weight-tracker-five-chi.vercel.app/)
 
 ---
 
-Enjoy tracking your weight with ease! 🎉
+## Features
+- **Date Picker**: Select dates using a calendar widget.
+- **Graph Visualization**: View your weight trends on a line chart.
+- **Undo Feature**: Undo the last overridden entry within 5 seconds.
+- **Delete Functionality**: Remove specific entries manually.
+- **LocalStorage Integration**: All data is stored in the browser and persists even after the page is refreshed.
 
+---
+
+## Tech Stack
+- **Frontend**: React.js
+- **Charting**: Chart.js
+- **Date Picker**: React DatePicker
+- **CSS**: Custom and library styling for components
+
+---
+
+## Installation
+
+### Prerequisites
+- **Node.js** and **npm** installed on your system.
+
+### Steps
+1. Clone this repository:
+   ```bash
+   git clone https://github.com/yourusername/your-repo-name.git
+   ```
+2. Navigate to the project directory:
+   ```bash
+   cd weight-tracker
+   ```
+3. Install dependencies:
+   ```bash
+   npm install
+   ```
+4. Start the development server:
+   ```bash
+   npm start
+   ```
+5. Open your browser and go to `http://localhost:3000`.
+
+---
+
+## Deployment
+
+This application is deployed on **Vercel**. Follow these steps to deploy:
+1. Push your project to a GitHub repository.
+2. Log in to [Vercel](https://vercel.com/).
+3. Import the GitHub repository and set the build command to:
+   ```bash
+   npm run build
+   ```
+4. Set the output directory to:
+   ```
+   build/
+   ```
+5. Deploy and share the provided live URL!
+
+---
+
+## Usage
+1. Select a date using the calendar widget.
+2. Enter your weight in kilograms.
+3. Click **Submit** to save the entry.
+4. View your weight trend on the graph.
+5. To delete an entry, click the delete button next to it in the history list.
+
+---
+
+## Future Enhancements
+- Add user authentication to enable multi-device sync.
+- Allow export/import of weight data.
+- Provide analysis insights such as BMI calculations.
+
+---
+
+## License
+This project is licensed under the MIT License. Feel free to modify and use it.
